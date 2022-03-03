@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import { Storage } from '@google-cloud/storage'
 import { logger } from './logger'
 import { InMemFile, FileCache } from './types'
@@ -15,6 +16,7 @@ const cache: FileCache = {}
 const cacheFlushInterval = 60 * 60 * 1000 // 1 time i millisekunder
 
 collectDefaultMetrics()
+app.use(cors({ origin: /\.nav\.no$/ }))
 
 app.set('x-powered-by', false)
 
