@@ -21,6 +21,13 @@ app.use(cors({ origin: /\.nav\.no$/ }))
 app.set('x-powered-by', false)
 
 app.get('/', async(req, res) => res.send('I am flex static files'))
+app.get('/robots.txt', (req, res) => {
+    res.header('Content-Type', 'text/plain')
+    res.send('User-agent: *\nDisallow: /')
+})
+app.get('/favicon.ico', (req, res) => {
+    res.sendStatus(404)
+})
 app.get('/internal/health', async(req, res) => res.sendStatus(200))
 app.get('/internal/prometheus', async(req, res) => {
     res.set('Content-Type', register.contentType)
