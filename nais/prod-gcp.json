@@ -1,6 +1,0 @@
-{
-  "bucketName": "flex-static-files-prod",
-  "ingress": "https://flex-static-files.nav.no",
-  "minReplicas": 2,
-  "maxReplicas": 3
-}
