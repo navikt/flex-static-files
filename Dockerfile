@@ -1,4 +1,4 @@
-FROM gcr.io/distroless/nodejs@sha256:6b2a243b543dbdb919977ceb43c7f7bf090ce66f02d1f12780fe52037f1bdc15
+FROM gcr.io/distroless/nodejs@sha256:0ab0c25a43c128eea3709246f6ec6383ac8b2027b33431b79199b1cf13331a64
 
 COPY /build ./build
 
