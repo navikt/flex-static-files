@@ -41,6 +41,7 @@ spec:
   gcp:
     buckets:
       - name: {{ bucketName }}
+        cascadingDelete: true
   env:
     - name: BUCKET_NAME
       value: {{ bucketName }}
